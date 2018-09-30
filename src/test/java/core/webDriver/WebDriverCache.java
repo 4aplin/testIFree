@@ -42,8 +42,6 @@ public final class WebDriverCache
         }
         if (!domainUnloadInitialized)
         {
-//            AppDomain.CurrentDomain.DomainUnload += CurrentDomainOnDomainUnload;
-
             domainUnloadInitialized = true;
         }
         webDriver = webDriverWrapper;
@@ -54,14 +52,6 @@ public final class WebDriverCache
         webDriver.Quit();
         webDriver = null;
 
-//        AppDomain.CurrentDomain.DomainUnload -= CurrentDomainOnDomainUnload;
     }
 
-//    private static void CurrentDomainOnDomainUnload(Object sender, EventArgs e)
-//    {
-//        if (webDriver != null)
-//        {
-//            DestroyInstance();
-//        }
-//    }
 }

@@ -6,7 +6,6 @@ import core.webDriver.WebDriverCache;
 import org.testng.annotations.BeforeMethod;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 public class SetUrlTestBase extends SimpleFunctionalTestBase
 {
@@ -23,10 +22,9 @@ public class SetUrlTestBase extends SimpleFunctionalTestBase
         super.SetUp();
         LoadPage(LoginPage.class, "");
         WebDriverCache.getWebDriver().DeleteAllCookies();
-//        apiRequest = new Api(apiUrl);
     }
 
-//    public String apiUrl = "https://app.aimylogic.com/restapi/";
+
     public String newEmail = emailGeneration();
     public String email = "test123@.testcom";
     public String pass = "123456789";

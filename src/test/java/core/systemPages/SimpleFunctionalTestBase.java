@@ -3,9 +3,7 @@ package core.systemPages;
 import core.webDriver.WebDriverCache;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Listeners;
 
-//@Listeners({ElementScreenshot.class})
 public class SimpleFunctionalTestBase extends WebDriverFunctionalTestBase
 {
     @BeforeSuite

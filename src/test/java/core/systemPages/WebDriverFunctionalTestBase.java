@@ -80,10 +80,5 @@ public abstract class WebDriverFunctionalTestBase
         return "";
     }
 
-    private static void CaptureJavascriptErrors()
-    {
-        Object tempVar = WebDriverCache.getWebDriver().ExecuteScript("return window.jsErrors");
-        String errors = (String)((tempVar instanceof String) ? tempVar : null);
-    }
 }
 

@@ -8,13 +8,11 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -22,30 +20,9 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverWrapper
 {
     public static boolean Switch = true;
-    public static final String USERNAME = "andreiarnautov1";
-    public static final String AUTOMATE_KEY = "yiFysr9R61GJTRg1TDzt";
-    public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
-
     private WebDriver driver;
     public WebDriverWrapper()
     {
-        if (!Switch) {
-            DesiredCapabilities caps = new DesiredCapabilities();
-            caps.setCapability("browser", "Chrome");
-            caps.setCapability("browser_version", "51.0");
-            caps.setCapability("os", "Windows");
-            caps.setCapability("os_version", "10");
-            caps.setCapability("resolution", "1280x1024");
-            caps.setCapability(CapabilityType.PAGE_LOAD_STRATEGY, "eager");
-            caps.setCapability("build", "TestNG - Sample");
-
-            try {
-                driver = new RemoteWebDriver(new URL(URL), caps);
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            }
-        }
-
         if (Switch) {
             String OsType = System.getProperty("os.name");
             if (OsType.startsWith("Windows"))

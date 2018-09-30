@@ -1,6 +1,5 @@
 package core.systemControls;
 
-import core.supportClass.StopWatch;
 import core.webDriver.WebDriverCache;
 import org.junit.Assert;
 import org.openqa.selenium.ElementNotVisibleException;
@@ -10,7 +9,7 @@ import org.openqa.selenium.WebDriverException;
 public final class Waiter
 {
     private static final int waitTimeout = 500;
-    private static final int defaultTimeout = 90000;
+    private static final int defaultTimeout = 150000;
     private static final int firstTestTimeoutFactor = 3;
     private static String firstTestName;
 
