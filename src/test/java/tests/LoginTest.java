@@ -59,7 +59,7 @@ public class LoginTest extends SetUrlTestBase
         loginPage.PasswordInput.SetValue("");
         loginPage.SignInButton.click();
 
-//        WebElement element = driver.findElement(By.id("first"));
+
 //        driver.findElement.By.linkText("Неверный логин или пароль");
         loginPage.ErrorMessage.getIsVisible();
         loginPage.ErrorMessage.WaitVisibleWithRetries();
